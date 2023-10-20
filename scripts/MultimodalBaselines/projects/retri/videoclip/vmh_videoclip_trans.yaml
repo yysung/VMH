@@ -1,0 +1,47 @@
+slurm_config: big
+task_type: local_predict
+dataset:
+  split: train
+  video_processor: ShardedVideoProcessor
+  aligner: OverlappedAligner
+  bert_name: bert-base-uncased
+  meta_processor: ShardedHow2MetaProcessor
+  tfeat_dir: data/vmh/vmh_s3d_shard_small/raw_caption_with_headlines_dedup.bert-base-uncased.
+  train_path: data/vmh/vmh_train.lst
+  val_path: data/vmh/vmh_val.lst
+  test_path: data/vmh/vmh_test.lst
+  vfeat_dir: data/vmh/vmh_s3d_shard_small
+  text_processor: ShardedTextProcessor
+  subsampling: 1
+  sampled_min_len: 8
+  sampled_max_len: 64
+  sampled_video_min_len: 8
+  sampled_video_max_len: 64
+  max_video_len: 64
+  max_len: 96
+  lazy_vfeat_mask: true
+  mfm_probability: 0.0
+  mlm_probability: 0.0
+  mm_prob: 0.0
+fairseq:
+  common:
+    tensorboard_logdir: runs
+  dataset:
+    batch_size: 16
+    valid_subset: valid
+    num_workers: 1
+  checkpoint:
+    save_dir: runs/retri/videoclip/youcook/eval
+  common_eval:
+    path: runs/retri/videoclip/checkpoint_best.pt
+    #path: runs/retri/videoclip_vhm/finetune/checkpoint_last.pt
+model:
+  model_cls: MMFusionSeparate
+  mm_encoder_cls: null
+  video_encoder_cls: MMBertForEncoder
+  text_encoder_cls: BertModel
+  num_hidden_video_layers: 6
+eval:
+  save_path: runs/retri/videoclip/youcook/eval
+metric: RetrievalMetric
+predictor: RetrievalPredictor

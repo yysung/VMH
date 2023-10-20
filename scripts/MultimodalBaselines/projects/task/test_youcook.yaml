@@ -1,0 +1,22 @@
+includes: projects/task/test.yaml
+dataset:
+  meta_processor: How2MetaProcessor
+  test_path: data/feat/val.lst
+  trainval_annotation: data/YouCook/raw_caption.json
+  use_annotation_text: True
+  video_processor: VideoProcessor
+  vfeat_dir: data/feat/feat_youcook_s3d
+  text_processor: TextProcessor
+  aligner: DSAligner
+  num_iso_layer: 12
+model:
+  model_cls: MMFusionJoint
+  mm_encoder_cls: MMBertForJoint
+eval:
+  save_path: runs/task/youcook/eval_task
+fairseq:
+  # read code and find what is the checkpoint arg.
+  common_eval:
+    path: runs/retri/videoclip/checkpoint_best.pt
+metric: RetrievalMetric
+predictor: RetrievalPredictor

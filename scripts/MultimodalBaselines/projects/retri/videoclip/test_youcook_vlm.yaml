@@ -1,0 +1,31 @@
+slurm_config: big
+task_type: local_predict
+dataset:
+  split: test
+  video_processor: VideoProcessor
+  aligner: DSAligner
+  bert_name: bert-base-uncased
+  meta_processor: How2MetaProcessor
+  test_path: data/feat/vhm_test.lst
+  use_annotation_text: true
+  vfeat_dir: data/feat/vhm_s3d_nolabel
+  text_processor: TextProcessor
+  num_iso_layer: 12
+  max_video_len: 32
+  max_len: 96
+fairseq:
+  dataset:
+    batch_size: 256
+    valid_subset: test
+    num_workers: 2
+  common_eval:
+    path: runs/mtm/vlm/checkpoint_best.pt
+    #path: runs/mtm/vlm_vhm/finetune/checkpoint_last.pt
+model:
+  model_cls: MMFusionJoint
+  mm_encoder_cls: MMBertForJoint
+  use_seg_emb: true
+eval:
+  save_path: runs/mtm/videoclip/youcook/eval
+metric: RetrievalMetric
+predictor: RetrievalPredictor
