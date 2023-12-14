@@ -8,8 +8,11 @@ Polarization and the marketplace for impressions have conspired to make navigati
 # Crowdsourcing Framework
 The below framework is specifically devised to reduce the subjectivity of the misleading video headline detection task. The annotators are asked to encounter each schemes to finalize their label annotations on the misleadingness of the headline and rationale annotations that demonstrates the reason behind their decisions. 
 
-![Alt label_diagram_final.pdf](./label_diagram_final.pdf)
-![Alt rationale_diagram_final.pdf](./rationale_diagram_final.pdf)
+Label Annotation Scheme
+![Label Annotation Scheme](label_diagram_final.pdf)
+
+Rationale Annotation Scheme
+![Rationale Annotation Scheme](rationale_diagram_final.pdf)
 
 # Codebase
 The preprocessing code is based on raw data collected from MTurk crowdsourcing platform.
