@@ -10,8 +10,9 @@ The below framework is specifically devised to reduce the subjectivity of the mi
 
 Label Annotation Scheme
 ![Label Annotation Scheme](label_diagram_final.pdf)
+
 <p>
-    <img src="label_diagram_final.pdf" width="220" height="240" />
+    <img src="label_diagram_final.pdf" width="500" height="400" />
 </p>
 
 Rationale Annotation Scheme
