@@ -9,12 +9,14 @@ Polarization and the marketplace for impressions have conspired to make navigati
 The below framework is specifically devised to reduce the subjectivity of the misleading video headline detection task. The annotators are asked to encounter each schemes to finalize their label annotations on the misleadingness of the headline and rationale annotations that demonstrates the reason behind their decisions. 
 
 ## Label Annotation Scheme<br>
-[label_diagram_final.pdf](./label_diagram_final.pdf)
+![label](https://github.com/yysung/VMH/assets/45355533/e34661c3-4a08-49c9-ba29-1026b6560cd9)
+
 
 <br>
 
 ## Rationale Annotation Scheme<br>
-[rationale_diagram_final.pdf](./rationale_diagram_final.pdf)
+![rationale](https://github.com/yysung/VMH/assets/45355533/8b263e1e-51a6-40d8-b5b0-2b7ddd5bffaf)
+
 
 <br>
 
