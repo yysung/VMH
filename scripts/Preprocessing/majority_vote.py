@@ -1,3 +1,11 @@
+import csv
+import pandas as pd
+import numpy as np
+import json
+from collections import defaultdict
+import matplotlib.pyplot as plt
+
+
 def majority_vote(final_dff):
     maj_answers = []
     headlines = []
@@ -17,7 +25,7 @@ def majority_vote(final_dff):
         dict_rows.append(dict_row)
     dff_1 = pd.concat([pd.Series(worker_ids),pd.DataFrame(video_urls),pd.DataFrame(headlines),pd.Series(dict_rows),pd.DataFrame(maj_answers)],axis=1)
     dff_1.columns = ['worker_ids','video_urls','headline','labels','majority_answer']
-    #dff_1.to_csv('for_alpha.csv')
+    
     leading_labels = dff_1[dff_1['majority_answer']=='leading']
     misleading_labels = dff_1[dff_1['majority_answer']=='misleading']
     result = dff_1['majority_answer'].value_counts().to_dict()
