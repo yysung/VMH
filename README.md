@@ -14,6 +14,8 @@ The below framework is specifically devised to reduce the subjectivity of the mi
 # Codebase
 The preprocessing code is based on raw data collected from MTurk crowdsourcing platform.
 
-The code for benchmark models (VideoCIP and VLM) are forked from https://github.com/facebookresearch/fairseq/blob/main/examples/MMPT/README.md
+The code for benchmark models ([VideoCLIP](https://aclanthology.org/2021.emnlp-main.544/) and [VLM](https://aclanthology.org/2021.findings-acl.370/)) are forked from https://github.com/facebookresearch/fairseq/blob/main/examples/MMPT/README.md
+Both models are video-text retrieval models, which are added a classification layer to be used a classifier that detects misleading video headlines. 
+Code is available in ./scripts/MultimodalBaselines.
 
 
