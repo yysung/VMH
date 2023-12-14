@@ -10,11 +10,11 @@ The below framework is specifically devised to reduce the subjectivity of the mi
 
 Label Annotation Scheme<br>
 [label_diagram_final.pdf](https://github.com/yysung/VMH/files/13679045/label_diagram_final.pdf)
-
+<br>
 
 Rationale Annotation Scheme<br>
 [rationale_diagram_final.pdf](https://github.com/yysung/VMH/files/13679044/rationale_diagram_final.pdf)
-
+<br>
 
 # Codebase
 The preprocessing code is based on raw data collected from MTurk crowdsourcing platform.
