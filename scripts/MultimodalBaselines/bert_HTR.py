@@ -2,7 +2,7 @@
 """
 Created on Fri Apr 29 22:57:04 2022
 
-@author: HR
+@author: YY
 """
 
 from transformers import AutoTokenizer
